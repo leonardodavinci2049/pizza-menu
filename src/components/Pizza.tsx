@@ -16,7 +16,7 @@ const Pizza = ({
   soldOut,
 }: TypePizzaProps) => {
   return (
-    <li className={`pizza ${soldOut ? "sold-out" : ""}`}>
+    <li >
       <img src={photoName} alt={name} />
       <div>
         <h3>{name}</h3>
