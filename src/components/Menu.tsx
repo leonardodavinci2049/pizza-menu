@@ -6,7 +6,7 @@ const Menu = () => {
   // const pizzas = [];
   const numPizzas = pizzas.length;
   return (
-    <main className="menu">
+    <main >
       <h2>Our Menu</h2>
       {numPizzas > 0 ? (
         <>
@@ -15,7 +15,7 @@ const Menu = () => {
             from our stone oven, all organic, all delicious.
           </p>
 
-          <ul className="pizzas">
+          <ul >
             {pizzas.map((pizza) => (
               <Pizza key={pizza.name} {...pizza} />
             ))}
