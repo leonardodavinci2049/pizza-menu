@@ -7,7 +7,7 @@ const Footer = () => {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
   return (
-    <footer className="footer">
+    <footer className="md:col-span-2" >
       {isOpen ? (
         <Order closeHour={closeHour} openHour={openHour} />
       ) : (
