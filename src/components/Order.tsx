@@ -2,12 +2,12 @@ import "../index.css";
 
 const Order = ({ closeHour, openHour }: { closeHour: number; openHour: number }) => {
   return (
-    <div >
+    <div className="order">
       <p>
         We're open from {openHour}:00 to {closeHour}:00. Come visit us or order
         online.
       </p>
-      <button >Order</button>
+      <button className="btn">Order</button>
     </div>
   );
 };
