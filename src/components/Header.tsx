@@ -1,9 +1,10 @@
 import "../index.css";
 
 const Header = () => {
+  const style = {};
   return (
-    <header >
-      <h1 >Fast React Pizza Co.</h1>
+    <header className="header">
+      <h1 style={style}>Fast React Pizza Co.</h1>
     </header>
   );
 };

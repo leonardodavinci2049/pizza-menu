@@ -4,12 +4,11 @@ import Header from "../components/Header";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Menu />
-
-      <Footer />
-    </div>
+    <div className="container">
+    <Header />
+    <Menu />
+    <Footer />
+  </div>
   );
 }
 

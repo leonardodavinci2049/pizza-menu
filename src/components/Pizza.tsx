@@ -16,21 +16,21 @@ const Pizza = ({
   soldOut,
 }: TypePizzaProps) => {
   return (
-    <li >
-      <img src={photoName} alt={name} />
-      <div>
-        <h3>{name}</h3>
-        <p>{ingredients}</p>
+    <li className={`pizza ${soldOut ? "sold-out" : ""}`}>
+    <img src={photoName} alt={name} />
+    <div>
+      <h3>{name}</h3>
+      <p>{ingredients}</p>
 
-        {/* {pizzaObj.soldOut ? (
-          <span>SOLD OUT</span>
-        ) : (
-          <span>{pizzaObj.price}</span>
-        )} */}
+      {/* {pizzaObj.soldOut ? (
+        <span>SOLD OUT</span>
+      ) : (
+        <span>{pizzaObj.price}</span>
+      )} */}
 
-        <span>{soldOut ? "SOLD OUT" : price}</span>
-      </div>
-    </li>
+      <span>{soldOut ? "SOLD OUT" : price}</span>
+    </div>
+  </li>
   );
 };
 
