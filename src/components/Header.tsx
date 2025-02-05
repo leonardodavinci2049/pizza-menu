@@ -1,10 +1,11 @@
 import "../index.css";
 
 const Header = () => {
-  const style = {};
   return (
-    <header className="header">
-      <h1 style={style}>Fast React Pizza Co.</h1>
+    <header className="py-12 text-center animate-fade-in">
+      <h1 className="text-[#f8c245] text-4xl md:text-6xl font-mono tracking-wider hover:scale-105 transition-transform">
+        FAST REACT PIZZA CO.
+      </h1>
     </header>
   );
 };

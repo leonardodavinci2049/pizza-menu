@@ -1,24 +1,18 @@
 import "../index.css";
 import Order from "./Order";
 
-const OPEN_HOUR: number = 12;
-const CLOSE_HOUR: number = 22;
-
-// Função helper com tipo de retorno explícito
-const checkIsOpen = (currentHour: number): boolean => {
-  return currentHour >= OPEN_HOUR && currentHour <= CLOSE_HOUR;
-};
-
 const Footer = () => {
-  const hour: number = new Date().getHours();
-  const isOpen: boolean = checkIsOpen(hour);
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
   return (
-    <footer className="footer">
+    <footer className="py-8 text-center text-gray-600 border-t mt-8 bg-white/50">
       {isOpen ? (
-        <Order closeHour={CLOSE_HOUR} openHour={OPEN_HOUR} />
+        <Order closeHour={closeHour} openHour={openHour} />
       ) : (
-        <p>
-          We're happy to welcome you between {OPEN_HOUR}:00 and {CLOSE_HOUR}:00.
+        <p className="text-sm hover:text-gray-800 transition-colors">
+          We're happy to welcome you between {openHour}:00 and {closeHour}:00.
         </p>
       )}
     </footer>

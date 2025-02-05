@@ -1,12 +1,6 @@
 import "../index.css";
 
-// Interface para as props
-interface OrderProps {
-  closeHour: number;
-  openHour: number;
-}
-
-const Order = ({ closeHour, openHour }: OrderProps) => {
+const Order = ({ closeHour, openHour }: { closeHour: number; openHour: number }) => {
   return (
     <div className="order">
       <p>
