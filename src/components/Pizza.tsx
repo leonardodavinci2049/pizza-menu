@@ -16,20 +16,21 @@ const Pizza = ({
   soldOut,
 }: TypePizzaProps) => {
   return (
-    <li className="flex gap-[3.2rem]">
-      <img
-        src={photoName}
-        alt={name}
-        className="w-[12rem] aspect-square self-start"
-      />
-      <div className="flex flex-col gap-[0.8rem] py-[0.4rem]">
-        <h3 className="text-[2rem] font-normal">{name}</h3>
-        <p className="text-[1.4rem] font-light italic mb-auto">{ingredients}</p>
-        <span className="block text-[1.6rem]">
-          {soldOut ? "SOLD OUT" : price}
-        </span>
-      </div>
-    </li>
+    <li className={`pizza ${soldOut ? "sold-out" : ""}`}>
+    <img src={photoName} alt={name} />
+    <div>
+      <h3>{name}</h3>
+      <p>{ingredients}</p>
+
+      {/* {pizzaObj.soldOut ? (
+        <span>SOLD OUT</span>
+      ) : (
+        <span>{pizzaObj.price}</span>
+      )} */}
+
+      <span>{soldOut ? "SOLD OUT" : price}</span>
+    </div>
+  </li>
   );
 };
 
